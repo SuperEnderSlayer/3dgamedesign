@@ -86,9 +86,10 @@
 
 				// Place boosts here
 				boostAt(xFn, zFn, 0.05);
-				boostAt(xFn, zFn, 0.06);
-				boostAt(xFn, zFn, 0.07);
-				boostAt(xFn, zFn, 0.08);
+				boostAt(xFn, zFn, 0.6);
+				boostAt(xFn, zFn, 0.9);
+				boostAt(xFn, zFn, 1.4);
+				boostAt(xFn, zFn, 2.3);
 
 				scene.registerAfterRender(function() {
 				boosts.forEach(function(boost, i){
@@ -109,7 +110,11 @@
 
 				var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0, 1, 0), scene);
 
-				rampAt(xFn, zFn, 0.07, -Math.PI / 4, scene); //Remove the negative infront of "math" to turn the ramp around
+				rampAt(xFn, zFn, 0.05, -Math.PI / 4, scene); //Remove the negative infront of "math" to turn the ramp around
+				rampAt(xFn, zFn, 0.7, -Math.PI / 4, scene);
+				rampAt(xFn, zFn, 1, -Math.PI / 4, scene);
+				rampAt(xFn, zFn, 1.5, -Math.PI / 4, scene);
+				rampAt(xFn, zFn, 2.3, -Math.PI / 4, scene);
 
 				scene.registerAfterRender(function() { 
 				var vel = playerSphere.physicsImpostor.getLinearVelocity();
